@@ -1,0 +1,65 @@
+@use "../abstracts" as abs;
+@use "../base/breakpoints" as br;
+
+.footer{
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    background-color: abs.$color-dark;
+    justify-items: center;
+    align-items: center;
+    padding: 5rem 0;
+    border-radius: 0 10rem 0 0;
+
+    @media only screen and (max-width:br.$bp-600){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    &__logo{
+        align-self: start;
+
+        @media only screen and (max-width:br.$bp-600){
+            align-self: center;
+        }
+    }
+    &__lists{
+        justify-self: start;
+        grid-column: 2 / 3;
+        display: flex;
+        gap: 20rem;
+
+        @media only screen and (max-width:br.$bp-900){
+            gap: 10rem;
+        }
+
+        @media only screen and (max-width:br.$bp-600){
+            display: flex;
+            flex-direction: column;
+            gap: 5rem;
+        }
+    }
+
+    &__list{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    &__link{
+        text-decoration: none;
+        color: abs.$color-g;
+        font-size: 1.8rem;
+        &:hover{
+            color: abs.$color-primary;
+        }
+
+        &:focus{
+            background-color: #222;
+            color: abs.$color-primary;
+            outline: none;
+        }
+    }
+}

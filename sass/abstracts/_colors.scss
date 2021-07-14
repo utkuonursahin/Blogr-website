@@ -1,0 +1,23 @@
+$color-primary:hsl(356, 100%, 66%);
+$color-secondary:hsl(355, 100%, 74%);
+
+$color-headings:hsl(208, 49%, 24%);
+$color-w:rgb(255, 255, 255);
+$color-w-soft:rgb(245, 243, 243);
+$color-g:hsl(240, 2%, 79%);
+$color-dark-grey:hsl(207, 13%, 34%);
+$color-dark:#333;
+
+
+$color-gradient-primary:hsl(13, 94%, 68%);
+$color-gradient-secondary:hsl(353, 100%, 62%);
+
+$color-gradient-tertiary:hsl(237, 17%, 21%);
+$color-gradient-alternative:hsl(237, 23%, 32%);
+
+$color-btn:hsl(356, 100%, 87%);
+
+$shadow-dark : 2.1rem 2.4rem 3rem rgba(0,0,0,.15);
+$shadow-outline : 0 0 0 .3rem $color-w;
+
+$gradient-primary:linear-gradient(to left top, $color-gradient-primary,$color-gradient-secondary);

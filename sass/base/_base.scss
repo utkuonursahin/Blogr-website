@@ -1,0 +1,32 @@
+@use "../abstracts" as abs;
+@use "../base/breakpoints" as br;
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; //1 rem = 10px
+
+    ::selection{
+        color: abs.$color-primary;
+        background-color: abs.$color-w-soft;
+    }
+
+    @media only screen and (max-width:br.$bp-1000){
+        font-size: 56.25%; //1rem = 9px
+    }
+    @media only screen and (max-width:br.$bp-900){
+        font-size: 50%; //1rem = 8px
+    }
+}
+
+body{
+    font-family: abs.$font-primary;
+    font-weight: 600;
+}

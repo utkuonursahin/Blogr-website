@@ -1,0 +1,71 @@
+@use "../abstracts" as abs;
+@use "../base/breakpoints" as br;
+.mid-features{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 50vh;
+    justify-items: center;
+    background-image: linear-gradient(to right,abs.$color-gradient-tertiary,abs.$color-gradient-alternative);
+    border-radius: 0 10rem 0 10rem;
+
+    @media only screen and (max-width:br.$bp-600){    
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img{
+        background-image: url("../images/bg-pattern-circles.svg");
+        background-size: cover;
+        background-position: left;
+        background-repeat: no-repeat;
+
+        @media only screen and (max-width:br.$bp-1000){
+            background-size: 120%;
+        }
+
+        @media only screen and (max-width:br.$bp-400){
+            background-size: 100%;
+        }
+
+        img{
+            transform: translateY(-10%);
+
+            @media only screen and (max-width:br.$bp-1000){
+                width: 90%;
+                transform: translateY(10%);
+            }
+
+            @media only screen and (max-width:br.$bp-600){    
+                width: 100%;
+                transform: translate(0);
+            }
+        }
+    }
+
+    &__content{
+        width: 75%;
+        align-self: center;
+        justify-self: start;
+
+        @media only screen and (max-width:br.$bp-1000){
+            justify-self: center;
+        }
+
+        @media only screen and (max-width:br.$bp-600){
+            margin-bottom: 5rem;
+        }
+
+        & p{
+            font-size: 2rem;
+            color: abs.$color-g;
+            margin-top: 4rem;
+            word-spacing: 4px;
+            letter-spacing: 1.3px;
+        }
+    }
+
+    &__header{
+        color: abs.$color-w ;
+    }
+
+}
